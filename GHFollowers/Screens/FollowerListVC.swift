@@ -38,6 +38,9 @@ class FollowerListVC: UIViewController {
     func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+		
+		let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addToFavButton))
+		navigationItem.rightBarButtonItem = addButton
     }
 
     func configureCollectionView() {
@@ -100,6 +103,10 @@ class FollowerListVC: UIViewController {
         snapshot.appendItems(followers) // to add data into snapshot
         DispatchQueue.main.async { self.dataSource.apply(snapshot, animatingDifferences: true) } // to add snapshots into datasource
     }
+	
+	@objc func addToFavButton() {
+//		print(#function, "[\(Self.self)]")
+	}
 }
 
 extension FollowerListVC: UICollectionViewDelegate {
