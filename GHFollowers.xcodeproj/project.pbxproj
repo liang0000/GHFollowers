@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B60125052B6251A800217CE6 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60125042B6251A800217CE6 /* FavoritesListVC.swift */; };
+		B60125052B6251A800217CE6 /* FavouritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60125042B6251A800217CE6 /* FavouritesListVC.swift */; };
 		B60125072B62647C00217CE6 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60125062B62647C00217CE6 /* GFButton.swift */; };
 		B60125092B627C8000217CE6 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60125082B627C8000217CE6 /* GFTextField.swift */; };
 		B601250D2B63BC4900217CE6 /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B601250C2B63BC4900217CE6 /* FollowerListVC.swift */; };
@@ -43,7 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B60125042B6251A800217CE6 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
+		B60125042B6251A800217CE6 /* FavouritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesListVC.swift; sourceTree = "<group>"; };
 		B60125062B62647C00217CE6 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		B60125082B627C8000217CE6 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		B601250C2B63BC4900217CE6 /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				B6538E792B5FBAE100C42B2A /* SearchVC.swift */,
 				B601250C2B63BC4900217CE6 /* FollowerListVC.swift */,
 				B6E83EA72B84A329000B46CE /* UserInfoVC.swift */,
-				B60125042B6251A800217CE6 /* FavoritesListVC.swift */,
+				B60125042B6251A800217CE6 /* FavouritesListVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -359,7 +359,7 @@
 				B623E57B2B6E28C00061D4DE /* GFError.swift in Sources */,
 				B6265FE32B80B336003C2450 /* UIHelper.swift in Sources */,
 				B623E5782B6D47700061D4DE /* NetworkManager.swift in Sources */,
-				B60125052B6251A800217CE6 /* FavoritesListVC.swift in Sources */,
+				B60125052B6251A800217CE6 /* FavouritesListVC.swift in Sources */,
 				B6538E782B5FBAE100C42B2A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
