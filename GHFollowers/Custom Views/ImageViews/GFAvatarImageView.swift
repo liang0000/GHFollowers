@@ -23,12 +23,10 @@ class GFAvatarImageView: UIImageView {
     }
     
     func downloadImage(from urlString: String) {
-        NetworkManager.shared.downloadImage(from: urlString) { image in
-            guard let image = image else { return }
+        NetworkManager.shared.downloadImage(from: urlString) { [weak self] image in
+            guard let self = self else { return }
             
-            DispatchQueue.main.async { // every time updating UI have to do it on main thread
-                self.image = image
-            }
+            DispatchQueue.main.async { self.image = image }
         }
     }
 }

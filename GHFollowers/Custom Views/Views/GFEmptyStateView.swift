@@ -16,10 +16,9 @@ class GFEmptyStateView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(message: String) {
-        super.init(frame: .zero) // shorthand for CGRect(x: 0, y: 0, height: 0, width: 0)
+	convenience init(message: String) {
+        self.init(frame: .zero) // shorthand for CGRect(x: 0, y: 0, height: 0, width: 0)
         messageLabel.text = message
-        configure()
     }
     
     private func configure() {
