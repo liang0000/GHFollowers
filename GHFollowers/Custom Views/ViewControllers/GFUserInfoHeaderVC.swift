@@ -24,8 +24,8 @@ class GFUserInfoHeaderVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
         configureUIElements()
-        addSubViews()
 		layoutUI()
     }
     
@@ -39,15 +39,6 @@ class GFUserInfoHeaderVC: UIViewController {
 		
 		locationImageView.image		= SFSymbols.location
 		locationImageView.tintColor = .secondaryLabel // because blue by default
-    }
-    
-    func addSubViews() {
-        view.addSubview(avatarImageView)
-        view.addSubview(usernameLabel)
-        view.addSubview(nameLabel)
-        view.addSubview(locationImageView)
-        view.addSubview(locationLabel)
-        view.addSubview(bioLabel)
     }
 
     func layoutUI() {
@@ -84,7 +75,7 @@ class GFUserInfoHeaderVC: UIViewController {
 			bioLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: textImagePadding),
 			bioLabel.leadingAnchor.constraint(equalTo: avatarImageView.leadingAnchor),
 			bioLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-			bioLabel.heightAnchor.constraint(equalToConstant: 60) // only wanted 3 lines long
+			bioLabel.heightAnchor.constraint(equalToConstant: 90) // only wanted 3 lines long
         ])
     }
 }

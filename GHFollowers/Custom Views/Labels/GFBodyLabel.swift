@@ -19,11 +19,12 @@ class GFBodyLabel: UILabel {
     }
     
     private func configure() {
-        textColor = .secondaryLabel
-        font = UIFont.preferredFont(forTextStyle: .body)
-        adjustsFontSizeToFitWidth = true
-        minimumScaleFactor = 0.75
-        lineBreakMode = .byWordWrapping // to make text into multiple line if too long
+        textColor 							= .secondaryLabel
+		font 								= UIFont.preferredFont(forTextStyle: .body) // able to dynamic
+		adjustsFontForContentSizeCategory 	= true // enable dynamic
+        adjustsFontSizeToFitWidth 			= true // to have smaller font size when have longer text
+        minimumScaleFactor 					= 0.75
+        lineBreakMode 						= .byWordWrapping // to make text into multiple line if too long
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

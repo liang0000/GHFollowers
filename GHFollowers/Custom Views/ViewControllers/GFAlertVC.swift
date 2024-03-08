@@ -9,17 +9,10 @@ class GFAlertVC: UIViewController {
     let messageLabel 	= GFBodyLabel(textAlignment: .center)
     let actionButton 	= GFButton(backgroundColor: .systemPink, title: "Ok")
     
-//    var alertTitle: String?
-//    var message: String?
-//    var buttonTitle: String?
-    
     let padding: CGFloat = 20
     
     init(title: String, message: String, buttonTitle: String) {
         super.init(nibName: nil, bundle: nil) // designated initialiser
-//        alertTitle = title
-//        self.message = message
-//        self.buttonTitle = buttonTitle
         titleLabel.text = title
         messageLabel.text = message
         actionButton.setTitle(buttonTitle, for: .normal)
@@ -33,6 +26,8 @@ class GFAlertVC: UIViewController {
         super.viewDidLoad()
 //        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)
 		view.backgroundColor = UIColor.black.withAlphaComponent(0.75) // to have opacity
+		view.addSubview(containerView)
+		containerView.addSubviews(titleLabel, messageLabel, actionButton)
         configureContainerView()
         configureTitleLabel()
         configureActionButton()
@@ -40,8 +35,6 @@ class GFAlertVC: UIViewController {
     }
     
     func configureContainerView() {
-        view.addSubview(containerView)
-        
         // view controller need to know
         NSLayoutConstraint.activate([
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -52,8 +45,6 @@ class GFAlertVC: UIViewController {
     }
     
     func configureTitleLabel() {
-        containerView.addSubview(titleLabel)
-//        titleLabel.text = alertTitle ?? "Something went wrong"
         
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: padding),
@@ -64,8 +55,6 @@ class GFAlertVC: UIViewController {
     }
     
     func configureActionButton() {
-        containerView.addSubview(actionButton)
-//        actionButton.setTitle(buttonTitle ?? "Ok", for: .normal)
         actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
@@ -78,8 +67,6 @@ class GFAlertVC: UIViewController {
     
     // order matters, you will get error if trying to configure message first before button, because button hasn't configured yet
     func configureMessageLabel() {
-        containerView.addSubview(messageLabel)
-//        messageLabel.text = message ?? "Unable to complete request"
         messageLabel.numberOfLines = 4
         
         NSLayoutConstraint.activate([
