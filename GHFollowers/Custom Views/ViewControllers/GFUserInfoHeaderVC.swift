@@ -37,7 +37,7 @@ class GFUserInfoHeaderVC: UIViewController {
         bioLabel.text 				= user.bio?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "No bio available" // to fix issue of \r or \n in bio (space in front of bio)
 		bioLabel.numberOfLines 		= 3
 		
-		locationImageView.image		= UIImage(systemName: SFSymbols.location)
+		locationImageView.image		= SFSymbols.location
 		locationImageView.tintColor = .secondaryLabel // because blue by default
     }
     

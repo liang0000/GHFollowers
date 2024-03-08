@@ -1,8 +1,9 @@
 //
 
+
 import UIKit
 
-struct UIHelper {
+enum UIHelper { // using enum instead of struct because don't want allow to use 'let helper = UIHelper()' as empty
     // ViewController don't need to know so putted here
     static func createThreeColumnFlowLayout(in view: UIView) -> UICollectionViewFlowLayout {
         let width = view.bounds.width // width of screen
