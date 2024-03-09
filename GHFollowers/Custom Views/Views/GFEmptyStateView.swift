@@ -17,7 +17,7 @@ class GFEmptyStateView: UIView {
     }
     
 	convenience init(message: String) {
-        self.init(frame: .zero) // shorthand for CGRect(x: 0, y: 0, height: 0, width: 0)
+        self.init(frame: .zero) // shorthand for CGRect(x: 0, y: 0, height: 0, width: 0); without 'frame: .zero', the object exists but doesn't know where to go in view.
         messageLabel.text = message
     }
     
