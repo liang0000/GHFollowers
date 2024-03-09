@@ -22,6 +22,7 @@ class UserInfoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		configureVC()
+		configureScrollView()
 		layoutUI()
 		getUserInfo()
     }

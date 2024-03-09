@@ -24,6 +24,7 @@ class GFButton: UIButton {
 //		configuration?.title = "Next"
 //		configuration?.baseBackgroundColor = .systemRed
         layer.cornerRadius 		= 10
+//		setTitleColor(.white, for: .normal)
         titleLabel?.textColor 	= .white
         titleLabel?.font 		= UIFont.preferredFont(forTextStyle: .headline)
         translatesAutoresizingMaskIntoConstraints = false // to have auto layout

@@ -42,18 +42,22 @@ class FavouritesListVC: UIViewController {
 			
 			switch result {
 				case .success(let favourites):
-					if favourites.isEmpty {
-						self.showEmptyStateView(with: "No Favourites?\nAdd one on the follower screen.", in: self.view)
-					} else  {
-						self.favourites = favourites
-						DispatchQueue.main.async {
-							self.tableView.reloadData()
-							self.view.bringSubviewToFront(self.tableView) // to cover empty state view if it comes first
-						}
-					}
+					self.updateUI(with: favourites)
 					
 				case .failure(let error):
 					self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+			}
+		}
+	}
+	
+	func updateUI(with favourites: [Follower]) {
+		if favourites.isEmpty {
+			self.showEmptyStateView(with: "No Favourites?\nAdd one on the follower screen.", in: self.view)
+		} else  {
+			self.favourites = favourites
+			DispatchQueue.main.async {
+				self.tableView.reloadData()
+				self.view.bringSubviewToFront(self.tableView) // to cover empty state view if it comes first
 			}
 		}
 	}
@@ -72,8 +76,8 @@ extension FavouritesListVC: UITableViewDataSource, UITableViewDelegate {
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { // when selected the item
-		let favorite    = favourites[indexPath.row]
-		let destVC      = FollowerListVC(username: favorite.login)
+		let favourite	= favourites[indexPath.row]
+		let destVC      = FollowerListVC(username: favourite.login)
 		
 //		navigationController?.pushViewController(destVC, animated: true)
 		show(destVC, sender: self)
