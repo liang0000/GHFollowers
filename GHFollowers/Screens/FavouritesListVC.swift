@@ -51,14 +51,15 @@ class FavouritesListVC: UIViewController {
 	}
 	
 	func updateUI(with favourites: [Follower]) {
-		if favourites.isEmpty {
+		guard !favourites.isEmpty else {
 			self.showEmptyStateView(with: "No Favourites?\nAdd one on the follower screen.", in: self.view)
-		} else  {
+			return
+		}
+		
+		DispatchQueue.main.async {
 			self.favourites = favourites
-			DispatchQueue.main.async {
-				self.tableView.reloadData()
-				self.view.bringSubviewToFront(self.tableView) // to cover empty state view if it comes first
-			}
+			self.tableView.reloadData()
+			self.view.bringSubviewToFront(self.tableView) // to cover empty state view if it comes first
 		}
 	}
 }
