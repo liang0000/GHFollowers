@@ -18,6 +18,19 @@ class FavouritesListVC: UIViewController {
 		getFavourites()
 	}
 	
+	override func updateContentUnavailableConfiguration(using state: UIContentUnavailableConfigurationState) {
+		guard favourites.isEmpty else {
+			contentUnavailableConfiguration = nil
+			return
+		}
+		
+		var config = UIContentUnavailableConfiguration.empty()
+		config.image = .init(systemName: "star")
+		config.text = "No Favourites"
+		config.secondaryText = "Add a favourite on the follower list screen"
+		contentUnavailableConfiguration = config
+	}
+	
 	func configureViewController() {
 		view.backgroundColor    = .systemBackground
 		title                   = "Favourites"
@@ -51,15 +64,15 @@ class FavouritesListVC: UIViewController {
 	}
 	
 	func updateUI(with favourites: [Follower]) {
-		guard !favourites.isEmpty else {
-			showEmptyStateView(with: "No Favourites?\nAdd one on the follower screen.", in: self.view)
-			return
-		}
-		
+//		guard !favourites.isEmpty else {
+//			showEmptyStateView(with: "No Favourites?\nAdd one on the follower screen.", in: self.view)
+//			return
+//		}
+		self.favourites = favourites
+		setNeedsUpdateContentUnavailableConfiguration()
 		DispatchQueue.main.async {
-			self.favourites = favourites
 			self.tableView.reloadData()
-			self.view.bringSubviewToFront(self.tableView) // to cover empty state view if it comes first
+			self.view.bringSubviewToFront(self.tableView)
 		}
 	}
 }
@@ -92,9 +105,7 @@ extension FavouritesListVC: UITableViewDataSource, UITableViewDelegate {
 			guard let error else {
 				self.favourites.remove(at: indexPath.row)
 				tableView.deleteRows(at: [indexPath], with: .left)
-				if self.favourites.isEmpty {
-					showEmptyStateView(with: "No Favourites?\nAdd one on the follower screen.", in: self.view)
-				}
+				setNeedsUpdateContentUnavailableConfiguration()
 				return
 			}
 			self.presentGFAlert(title: "Unable to remove", message: error.rawValue, buttonTitle: "Ok")

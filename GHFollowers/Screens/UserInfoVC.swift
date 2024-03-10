@@ -118,7 +118,6 @@ extension UserInfoVC: GFRepoItemVCDelegate {
 }
 
 extension UserInfoVC: GFFollowerItemVCDelegate {
-	#warning("search text field should go empty after this click")
 	func didTapGetFollowers(for user: User) {
 		guard user.followers != 0 else {
 			presentGFAlert(title: "No followers", message: "This user has no followers. What a shame 😞.", buttonTitle: "So sad")

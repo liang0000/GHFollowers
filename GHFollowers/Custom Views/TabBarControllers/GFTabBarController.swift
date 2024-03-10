@@ -26,7 +26,3 @@ class GFTabBarController: UITabBarController {
         return UINavigationController(rootViewController: favoritesListVC)
     }
 }
-
-#Preview {
-	GFTabBarController()
-}
