@@ -73,20 +73,20 @@ class FollowerListVC: UIViewController {
         showLoadingView()
 		isLoadingMoreFollowers = true
 		
-        NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in // NetworkManager has strong ref to UIViewController if without [weak self]
-            guard let self = self else { return }
-            self.dismissLoadingView()
-            
-            switch result {
-                case .success(let followers):
-					self.updateUI(with: followers)
-                    
-                case .failure(let error):
-                    self.presentGFAlertOnMainThread(title: "Bad", message: error.rawValue, buttonTitle: "Ok")
-            }
-			
-			self.isLoadingMoreFollowers = false
-        }
+		Task {
+			do {
+				let followers = try await NetworkManager.shared.getFollowers(for: username, page: page)
+				updateUI(with: followers)
+			} catch {
+				if let gfError = error as? GFError {
+					presentGFAlertOnMainThread(title: "Bad", message: gfError.rawValue, buttonTitle: "Ok")
+				} else {
+					presentDefaultError()
+				}
+			}
+			dismissLoadingView()
+			isLoadingMoreFollowers = false
+		}
     }
 	
 	func updateUI(with followers: [Follower]) {
@@ -120,17 +120,18 @@ class FollowerListVC: UIViewController {
 	@objc func addToFavButton() {
 		showLoadingView()
 		
-		NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
-			guard let self = self else { return }
-			self.dismissLoadingView()
-			
-			switch result {
-				case .success(let user):
-					addUserToFavourites(user: user)
-					
-				case .failure(let error):
-					self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+		Task {
+			do {
+				let user = try await NetworkManager.shared.getUserInfo(for: username)
+				addUserToFavourites(user: user)
+			} catch {
+				if let gfError = error as? GFError {
+					presentGFAlertOnMainThread(title: "Bad", message: gfError.rawValue, buttonTitle: "Ok")
+				} else {
+					presentDefaultError()
+				}
 			}
+			dismissLoadingView()
 		}
 	}
 	

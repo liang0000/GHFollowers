@@ -16,6 +16,10 @@ extension UIViewController {
         }
     }
 	
+	func presentDefaultError() {
+		presentGFAlertOnMainThread(title: "Something Went Wrong", message: "We were unable to complete your task at this time. Please try again.", buttonTitle: "Ok")
+	}
+	
 	func presentSafariVC(with url: URL) {
 		let safariVC = SFSafariViewController(url: url)
 		safariVC.preferredControlTintColor = .systemGreen
