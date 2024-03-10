@@ -2,6 +2,7 @@
 
 
 import UIKit
+import SwiftUI
 
 class FollowerCell: UICollectionViewCell {
     static let reuseID 	= "FollowerCell"
@@ -12,17 +13,21 @@ class FollowerCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        configure()
+//        configure()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+	
+	func set(follower: Follower) { // SwiftUI way
+		contentConfiguration = UIHostingConfiguration { FollowerView(follower: follower) }
+	}
     
-    func set(follower: Follower) {
-        usernameLabel.text = follower.login
-        avatarImageView.downloadImage(fromURL: follower.avatarUrl)
-    }
+//    func set1(follower: Follower) { // UIKit way
+//        usernameLabel.text = follower.login
+//        avatarImageView.downloadImage(fromURL: follower.avatarUrl)
+//    }
     
     private func configure() {
         addSubviews(avatarImageView, usernameLabel)
