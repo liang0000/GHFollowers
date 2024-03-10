@@ -42,3 +42,7 @@ enum DeviceTypes {
 		return isiPhoneX || isiPhoneXsMaxAndXr
 	}
 }
+
+enum AlertMessage {
+	static let message					= "We were unable to complete your task at this time. Please try again."
+}

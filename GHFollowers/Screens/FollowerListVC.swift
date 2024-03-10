@@ -78,11 +78,8 @@ class FollowerListVC: UIViewController {
 				let followers = try await NetworkManager.shared.getFollowers(for: username, page: page)
 				updateUI(with: followers)
 			} catch {
-				if let gfError = error as? GFError {
-					presentGFAlertOnMainThread(title: "Bad", message: gfError.rawValue, buttonTitle: "Ok")
-				} else {
-					presentDefaultError()
-				}
+				let errorDescription = (error as? GFError)?.rawValue ?? AlertMessage.message
+				presentGFAlert(title: "Bad stuff Happened", message: errorDescription, buttonTitle: "Ok")
 			}
 			dismissLoadingView()
 			isLoadingMoreFollowers = false
@@ -125,11 +122,8 @@ class FollowerListVC: UIViewController {
 				let user = try await NetworkManager.shared.getUserInfo(for: username)
 				addUserToFavourites(user: user)
 			} catch {
-				if let gfError = error as? GFError {
-					presentGFAlertOnMainThread(title: "Bad", message: gfError.rawValue, buttonTitle: "Ok")
-				} else {
-					presentDefaultError()
-				}
+				let errorDescription = (error as? GFError)?.rawValue ?? AlertMessage.message
+				presentGFAlert(title: "Bad stuff Happened", message: errorDescription, buttonTitle: "Ok")
 			}
 			dismissLoadingView()
 		}
@@ -142,11 +136,11 @@ class FollowerListVC: UIViewController {
 			guard let self = self else { return }
 			
 			guard let error = error else {
-				self.presentGFAlertOnMainThread(title: "Success!", message: "You have successfully favourited this user 🎉", buttonTitle: "Hooray!")
+				self.presentGFAlert(title: "Success!", message: "You have successfully favourited this user 🎉", buttonTitle: "Hooray!")
 				return
 			}
 			
-			self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+			self.presentGFAlert(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
 		}
 	}
 }
