@@ -13,25 +13,35 @@ class GFButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(backgroundColor: UIColor, title: String) {
+	convenience init(title: String, colour: UIColor, systemImageName: String) {
         self.init(frame: .zero)
-        self.backgroundColor = backgroundColor
-        setTitle(title, for: .normal)
+		set(title: title, colour: colour, systemImageName: systemImageName)
     }
     
     private func configure() {
-//		configuration = .filled()
-//		configuration?.title = "Next"
-//		configuration?.baseBackgroundColor = .systemRed
-        layer.cornerRadius 		= 10
+		configuration = .tinted() // apple default button style
+		configuration?.cornerStyle = .medium
+		translatesAutoresizingMaskIntoConstraints = false // to have auto layout
+//		setTitle("Done", for: .normal)
 //		setTitleColor(.white, for: .normal)
-        titleLabel?.textColor 	= .white
-        titleLabel?.font 		= UIFont.preferredFont(forTextStyle: .headline)
-        translatesAutoresizingMaskIntoConstraints = false // to have auto layout
+//		titleLabel?.text = "Done"
+//		titleLabel?.textColor = .white
+//		titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+//		layer.cornerRadius = 10
+//		backgroundColor = .green
     }
 	
-	func set(backgroundColor: UIColor, title: String) {
-		self.backgroundColor = backgroundColor
-		setTitle(title, for: .normal)
+	final func set( title: String, colour: UIColor, systemImageName: String) {
+		configuration?.title = title
+		configuration?.baseBackgroundColor = colour
+		configuration?.baseForegroundColor = colour // text colour
+		
+		configuration?.image = UIImage(systemName: systemImageName)
+		configuration?.imagePadding = 6
+		configuration?.imagePlacement = .leading
 	}
+}
+
+#Preview {
+	GFButton(title: "Test Button", colour: .green, systemImageName: "pencil")
 }
