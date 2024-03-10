@@ -52,7 +52,7 @@ class FavouritesListVC: UIViewController {
 	
 	func updateUI(with favourites: [Follower]) {
 		guard !favourites.isEmpty else {
-			self.showEmptyStateView(with: "No Favourites?\nAdd one on the follower screen.", in: self.view)
+			showEmptyStateView(with: "No Favourites?\nAdd one on the follower screen.", in: self.view)
 			return
 		}
 		

@@ -87,7 +87,7 @@ class FollowerListVC: UIViewController {
     }
 	
 	func updateUI(with followers: [Follower]) {
-		if followers.count < 100 { self.hasMoreFollowers = false }
+		if followers.count < 100 { hasMoreFollowers = false }
 		self.followers.append(contentsOf: followers)
 		
 		if self.followers.isEmpty {
@@ -96,7 +96,7 @@ class FollowerListVC: UIViewController {
 			return
 		}
 		
-		self.updateData(on: self.followers)
+		updateData(on: self.followers)
 	}
     
     func configureDataSource() {

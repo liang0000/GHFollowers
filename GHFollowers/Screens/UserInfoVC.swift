@@ -58,10 +58,10 @@ class UserInfoVC: UIViewController {
 	}
 	
 	func configureUIElements(with user: User) {
-		self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
-		self.add(childVC: GFRepoItemVC(user: user, delegate: self), to: self.itemViewOne)
-		self.add(childVC: GFFollowerItemVC(user: user, delegate: self), to: self.itemViewTwo)
-		self.dateLabel.text = "GitHub since \(user.createdAt.convertToMonthYearFormat())"
+		add(childVC: GFUserInfoHeaderVC(user: user), to: headerView)
+		add(childVC: GFRepoItemVC(user: user, delegate: self), to: itemViewOne)
+		add(childVC: GFFollowerItemVC(user: user, delegate: self), to: itemViewTwo)
+		dateLabel.text = "GitHub since \(user.createdAt.convertToMonthYearFormat())"
 	}
 	
 	func layoutUI() {
