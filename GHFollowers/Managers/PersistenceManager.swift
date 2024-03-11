@@ -7,7 +7,6 @@ enum PersistenceActionType {
 	case add, remove
 }
 
-#warning("try use struct later")
 enum PersistenceManager {
 	static private let defaults = UserDefaults.standard // because using custom data type, if is Int and just String then no need
 	

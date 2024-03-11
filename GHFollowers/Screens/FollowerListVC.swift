@@ -31,7 +31,6 @@ class FollowerListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
-        configureSearchController()
         configureCollectionView()
         getFollowers(username: username, page: page)
         configureDataSource()
@@ -42,6 +41,11 @@ class FollowerListVC: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
 	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		configureSearchController()
+	}
+	
 	override func updateContentUnavailableConfiguration(using state: UIContentUnavailableConfigurationState) {
 		if followers.isEmpty && !isLoadingMoreFollowers {
 			var config = UIContentUnavailableConfiguration.empty()
@@ -49,7 +53,9 @@ class FollowerListVC: UIViewController {
 			config.text = "No Followers"
 			config.secondaryText = "This user has no followers. Go follow them!"
 			contentUnavailableConfiguration = config
-		} else if navigationItem.searchController?.searchBar.text != "" && filteredFollowers.isEmpty { // when searching and can't search any result
+		} else if navigationItem.searchController != nil && // when searching and can't search any result
+					navigationItem.searchController?.searchBar.text != "" &&
+					filteredFollowers.isEmpty {
 			contentUnavailableConfiguration = UIContentUnavailableConfiguration.search()
 		} else {
 			contentUnavailableConfiguration = nil
@@ -74,13 +80,11 @@ class FollowerListVC: UIViewController {
     }
     
     func configureSearchController() {
-        #warning("Empty Follower View shouldn't have search bar")
-//        if followers.isEmpty { return }
         let searchController 									= UISearchController()
         searchController.searchResultsUpdater 					= self // set the delegate
         searchController.searchBar.placeholder 					= "Search for a username"
         searchController.obscuresBackgroundDuringPresentation 	= false // black overlay
-		navigationItem.searchController 						= searchController
+		navigationItem.searchController 						= followers.isEmpty ? nil : searchController
 //        navigationItem.hidesSearchBarWhenScrolling = false
     }
     
@@ -184,6 +188,7 @@ extension FollowerListVC: UISearchResultsUpdating {
         guard let filterText = searchController.searchBar.text, !filterText.isEmpty else {
 			filteredFollowers.removeAll()
             updateData(on: followers)
+			setNeedsUpdateContentUnavailableConfiguration()
             return
         }
         
