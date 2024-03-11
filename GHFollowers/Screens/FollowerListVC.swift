@@ -61,7 +61,6 @@ class FollowerListVC: UIViewController {
 			contentUnavailableConfiguration = nil
 		}
 	}
-
     
     func configureViewController() {
         view.backgroundColor = .systemBackground
