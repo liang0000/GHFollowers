@@ -6,7 +6,6 @@ import Foundation
 enum PersistenceActionType {
 	case add, remove
 }
-
 enum PersistenceManager {
 	static private let defaults = UserDefaults.standard // because using custom data type, if is Int and just String then no need
 	
