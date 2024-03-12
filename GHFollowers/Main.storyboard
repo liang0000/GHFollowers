@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WIU-xL-3hw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rsZ-tR-LKD">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--War Card View Controller-->
+        <!--War CardVC-->
         <scene sceneID="DB7-ua-kuf">
             <objects>
-                <viewController id="WIU-xL-3hw" customClass="WarCardViewController" customModule="GHFollowers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WIU-xL-3hw" customClass="WarCardVC" customModule="GHFollowers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f7q-Vc-3DG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,7 +77,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dM4-i3-WDl">
-                                <rect key="frame" x="135.66666666666666" y="109" width="121.99999999999997" height="67"/>
+                                <rect key="frame" x="135.66666666666666" y="153" width="121.99999999999997" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="OZq-ap-cGR"/>
                                 </constraints>
@@ -113,21 +113,23 @@
                             <constraint firstAttribute="bottom" secondItem="zC0-LP-kKA" secondAttribute="bottom" id="vYE-pO-yrU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ieu-Cu-FCq"/>
                     <connections>
                         <outlet property="leftImageView" destination="Vlj-fd-Chl" id="91h-IJ-m4p"/>
                         <outlet property="leftScoreLabel" destination="Htc-as-Dyl" id="zOK-UX-AcN"/>
                         <outlet property="rightImageView" destination="sub-3r-rOr" id="qlQ-Jg-s7I"/>
                         <outlet property="rightScoreLabel" destination="jht-Qg-HWu" id="bZX-Bg-dbw"/>
+                        <segue destination="egU-ga-ZE6" kind="show" identifier="toSquidVC" id="99h-WV-VlE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vZ-XK-i5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-746.37681159420299" y="94.565217391304358"/>
+            <point key="canvasLocation" x="179.38931297709922" y="94.366197183098592"/>
         </scene>
-        <!--View Controller-->
+        <!--SquidVC-->
         <scene sceneID="KCq-De-ZaU">
             <objects>
-                <viewController id="egU-ga-ZE6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SquidVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="egU-ga-ZE6" customClass="SquidVC" customModule="GHFollowers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VZN-jh-fzR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,10 +188,11 @@ Squid</string>
                             <constraint firstItem="Odj-pa-zzO" firstAttribute="bottom" secondItem="VZN-jh-fzR" secondAttribute="bottom" id="rwF-dA-e1g"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="HMU-z1-WXn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fa5-6w-BkA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="94"/>
+            <point key="canvasLocation" x="985.49618320610682" y="93.661971830985919"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pHy-9Y-cgj">
@@ -233,7 +236,7 @@ Squid</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Exp-ch-FzW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848" y="94"/>
+            <point key="canvasLocation" x="1773.2824427480916" y="93.661971830985919"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OHP-ja-Buc">
@@ -429,6 +432,24 @@ vnerenrof wef weofnow </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MC2-kZ-Sf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-746" y="768"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eXu-A1-rM7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rsZ-tR-LKD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IvE-yq-Wvw">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WIU-xL-3hw" kind="relationship" relationship="rootViewController" id="4Qe-l8-RLE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgw-P0-gdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-747.32824427480909" y="94.366197183098592"/>
         </scene>
     </scenes>
     <resources>

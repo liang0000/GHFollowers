@@ -14,7 +14,8 @@
 		B61E591F2B9C6CC400A8C02C /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61E591E2B9C6CC400A8C02C /* UITableView+Ext.swift */; };
 		B61E59242B9DF7AA00A8C02C /* FollowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61E59232B9DF7AA00A8C02C /* FollowerView.swift */; };
 		B61E59662BA0102C00A8C02C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61E59652BA0102B00A8C02C /* Main.storyboard */; };
-		B61E59692BA010EA00A8C02C /* WarCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61E59682BA010EA00A8C02C /* WarCardViewController.swift */; };
+		B61E59692BA010EA00A8C02C /* WarCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61E59682BA010EA00A8C02C /* WarCardVC.swift */; };
+		B61E596F2BA0253C00A8C02C /* SquidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61E596E2BA0253C00A8C02C /* SquidVC.swift */; };
 		B623E5662B6B67220061D4DE /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623E5652B6B67220061D4DE /* GFTitleLabel.swift */; };
 		B623E5682B6B862A0061D4DE /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623E5672B6B862A0061D4DE /* GFBodyLabel.swift */; };
 		B623E56A2B6B87710061D4DE /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623E5692B6B87710061D4DE /* GFAlertVC.swift */; };
@@ -57,7 +58,8 @@
 		B61E591E2B9C6CC400A8C02C /* UITableView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		B61E59232B9DF7AA00A8C02C /* FollowerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowerView.swift; sourceTree = "<group>"; };
 		B61E59652BA0102B00A8C02C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		B61E59682BA010EA00A8C02C /* WarCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarCardViewController.swift; sourceTree = "<group>"; };
+		B61E59682BA010EA00A8C02C /* WarCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarCardVC.swift; sourceTree = "<group>"; };
+		B61E596E2BA0253C00A8C02C /* SquidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidVC.swift; sourceTree = "<group>"; };
 		B623E5652B6B67220061D4DE /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		B623E5672B6B862A0061D4DE /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		B623E5692B6B87710061D4DE /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
@@ -143,7 +145,8 @@
 		B61E59672BA010D700A8C02C /* Other Views */ = {
 			isa = PBXGroup;
 			children = (
-				B61E59682BA010EA00A8C02C /* WarCardViewController.swift */,
+				B61E59682BA010EA00A8C02C /* WarCardVC.swift */,
+				B61E596E2BA0253C00A8C02C /* SquidVC.swift */,
 			);
 			path = "Other Views";
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B64745142B9B0D4D007CC690 /* UIView+Ext.swift in Sources */,
+				B61E596F2BA0253C00A8C02C /* SquidVC.swift in Sources */,
 				B623E56A2B6B87710061D4DE /* GFAlertVC.swift in Sources */,
 				B6E83EA82B84A329000B46CE /* UserInfoVC.swift in Sources */,
 				B60125092B627C8000217CE6 /* GFTextField.swift in Sources */,
@@ -396,7 +400,7 @@
 				B632FDB92B98667600EE2CA8 /* GFTabBarController.swift in Sources */,
 				B623E5802B6F365D0061D4DE /* GFAvatarImageView.swift in Sources */,
 				B623E5702B6BEBEC0061D4DE /* String+Ext.swift in Sources */,
-				B61E59692BA010EA00A8C02C /* WarCardViewController.swift in Sources */,
+				B61E59692BA010EA00A8C02C /* WarCardVC.swift in Sources */,
 				B6E83EDA2B88A958000B46CE /* GFSecondaryTitleLabel.swift in Sources */,
 				B623E5732B6CA0870061D4DE /* Follower.swift in Sources */,
 				B632FDF52B99EBC500EE2CA8 /* GFAlertContainerView.swift in Sources */,

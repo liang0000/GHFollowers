@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WarCardViewController: UIViewController {
+class WarCardVC: UIViewController {
     @IBOutlet weak var leftImageView: UIImageView!
     @IBOutlet weak var rightImageView: UIImageView!
     @IBOutlet weak var leftScoreLabel: UILabel!
@@ -20,6 +20,7 @@ class WarCardViewController: UIViewController {
     }
 
     @IBAction func dealTapped(_ sender: Any) {
+		// MARK: Deal Clicked
         let leftNumber = Int.random(in: 2...14)
         let rightNumber = Int.random(in: 2...14)
         
@@ -33,5 +34,16 @@ class WarCardViewController: UIViewController {
 			rightScore += 1
             rightScoreLabel.text = String(rightScore)
         }
+		
+		// MARK: Storyboard way
+		// click the VC in storyboard > Editor tab on top > Embed in > Navigation Controller
+		// assign class and Storyboard ID to SquidVC in storyboard inspector > tick Use Storyboard ID
+		let squidVC = storyboard?.instantiateViewController(withIdentifier: "SquidVC") as! SquidVC
+		show(squidVC, sender: self)
+		
+		// MARK: Segue way
+		// click the VC in storyboard > Editor tab on top > Embed in > Navigation Controller
+		// hold right click on WardCardVC on pull to SquidVC > show > provide Identifier to the segue like 'toSquidVC'
+		performSegue(withIdentifier: "SquidVC", sender: self)
     }
 }
