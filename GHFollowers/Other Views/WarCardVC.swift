@@ -44,6 +44,6 @@ class WarCardVC: UIViewController {
 		// MARK: Segue way
 		// click the VC in storyboard > Editor tab on top > Embed in > Navigation Controller
 		// hold right click on WardCardVC on pull to SquidVC > show > provide Identifier to the segue like 'toSquidVC'
-		performSegue(withIdentifier: "SquidVC", sender: self)
+		performSegue(withIdentifier: "toSquidVC", sender: self)
     }
 }
