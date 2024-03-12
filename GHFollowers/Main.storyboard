@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vZ-XK-i5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="179.38931297709922" y="94.366197183098592"/>
+            <point key="canvasLocation" x="-1" y="94"/>
         </scene>
         <!--SquidVC-->
         <scene sceneID="KCq-De-ZaU">
@@ -192,7 +192,7 @@ Squid</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fa5-6w-BkA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="985.49618320610682" y="93.661971830985919"/>
+            <point key="canvasLocation" x="770" y="94"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pHy-9Y-cgj">
@@ -236,7 +236,7 @@ Squid</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Exp-ch-FzW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1773.2824427480916" y="93.661971830985919"/>
+            <point key="canvasLocation" x="1155" y="768"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OHP-ja-Buc">
@@ -305,7 +305,7 @@ hearty breakfast</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhq-i2-NNs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874" y="768"/>
+            <point key="canvasLocation" x="524" y="768"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nWT-uT-CtA">
@@ -361,7 +361,7 @@ hearty breakfast</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwZ-AW-e7J" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61" y="768"/>
+            <point key="canvasLocation" x="-115" y="768"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vb4-qV-8Oz">
