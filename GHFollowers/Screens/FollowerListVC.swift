@@ -71,7 +71,7 @@ class FollowerListVC: UIViewController {
     }
 
     func configureCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view)) // to fill the whole screen
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
         view.addSubview(collectionView)
         collectionView.delegate = self
         collectionView.backgroundColor = .systemBackground
@@ -206,7 +206,7 @@ extension FollowerListVC: UserInfoVCDelegate {
 		followers.removeAll()
 		filteredFollowers.removeAll()
 		navigationItem.searchController?.searchBar.text = ""
-		collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true) // auto scroll first row
+		collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true) // auto scroll to first row
 		getFollowers(username: username, page: page)
 	}
 }

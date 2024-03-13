@@ -3,6 +3,101 @@
 <plist version="1.0">
 <dict>
 	<key>top-level-items</key>
-	<array/>
+	<array>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>18</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>17</string>
+					<key>Timestamp</key>
+					<string>731991858.177011</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>GHFollowers/Screens/FollowerListVC.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>    var collectionView: UICollectionView!
+</string>
+				<key>leading</key>
+				<string>	var isLoadingMoreFollowers = false
+    
+</string>
+				<key>trailing</key>
+				<string>    var dataSource: UICollectionViewDiffableDataSource&lt;Section, Follower&gt;!
+	
+	init(username: String) {
+</string>
+			</dict>
+			<key>title</key>
+			<string>CollectionView</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>7</string>
+					<key>StartingColumnNumber</key>
+					<string>42</string>
+					<key>StartingLineNumber</key>
+					<string>6</string>
+					<key>Timestamp</key>
+					<string>731992968.114635</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>GHFollowers/Screens/FavouritesListVC.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>
+</string>
+				<key>leading</key>
+				<string>
+class FavouritesListVC: UIViewController {
+	let tableView            	= UITableView()</string>
+				<key>trailing</key>
+				<string>	var favourites: [Follower]	= []
+	
+	override func viewDidLoad() {
+</string>
+			</dict>
+			<key>title</key>
+			<string>TableView</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+	</array>
 </dict>
 </plist>
