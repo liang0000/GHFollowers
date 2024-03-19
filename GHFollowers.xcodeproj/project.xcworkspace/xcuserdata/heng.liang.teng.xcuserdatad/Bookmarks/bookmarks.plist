@@ -106,13 +106,13 @@ class FavouritesListVC: UIViewController {
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>47</string>
+					<string>56</string>
 					<key>StartingColumnNumber</key>
-					<string>74</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>46</string>
+					<string>55</string>
 					<key>Timestamp</key>
-					<string>732559861.2247159</string>
+					<string>732560590.499446</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -128,16 +128,16 @@ class FavouritesListVC: UIViewController {
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>
+				<string>		UIView.animate(withDuration: 33, delay: 0, options: .curveEaseIn) {
 </string>
 				<key>leading</key>
-				<string>        show(followerListVC, sender: self)
+				<string>		view.layoutIfNeeded()
 		
-//		UIView.animate(withDuration: 0.33, delay: 0, options: .curveEaseIn) { // study purpose only</string>
+</string>
 				<key>trailing</key>
-				<string>//			view.layoutIfNeeded() // force update of any layout changes to be animated
-//		}
-    }
+				<string>			self.view.layoutIfNeeded() // force update of any layout changes to be animated
+		}
+	}
 </string>
 			</dict>
 			<key>title</key>

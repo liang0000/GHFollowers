@@ -43,11 +43,20 @@ class SearchVC: UIViewController {
         let followerListVC = FollowerListVC(username: usernameTextField.text!)
 //        navigationController?.pushViewController(followerListVC, animated: true)
         show(followerListVC, sender: self)
-		
-//		UIView.animate(withDuration: 0.33, delay: 0, options: .curveEaseIn) { // study purpose only
-//			view.layoutIfNeeded() // force update of any layout changes to be animated
-//		}
     }
+	
+	@objc func toggleChangeLogo() { // just study purpose; not working but something like this
+		if logoImageView.image == Images.placeholder {
+			logoImageView.image = Images.ghLogo
+		} else {
+			logoImageView.image = Images.placeholder
+		}
+		view.layoutIfNeeded()
+		
+		UIView.animate(withDuration: 0.33, delay: 0, options: .curveEaseIn) {
+			self.view.layoutIfNeeded() // force update of any layout changes to be animated
+		}
+	}
     
     func configureLogoImageView() {
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
