@@ -43,6 +43,10 @@ class SearchVC: UIViewController {
         let followerListVC = FollowerListVC(username: usernameTextField.text!)
 //        navigationController?.pushViewController(followerListVC, animated: true)
         show(followerListVC, sender: self)
+		
+//		UIView.animate(withDuration: 0.33, delay: 0, options: .curveEaseIn) { // study purpose only
+//			view.layoutIfNeeded() // force update of any layout changes to be animated
+//		}
     }
     
     func configureLogoImageView() {

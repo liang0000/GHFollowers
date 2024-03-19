@@ -61,11 +61,11 @@
 					<key>EndingLineNumber</key>
 					<string>7</string>
 					<key>StartingColumnNumber</key>
-					<string>42</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
 					<string>6</string>
 					<key>Timestamp</key>
-					<string>731992968.114635</string>
+					<string>732559395.74506</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -81,12 +81,12 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>
+				<string>	let tableView            	= UITableView()
 </string>
 				<key>leading</key>
 				<string>
 class FavouritesListVC: UIViewController {
-	let tableView            	= UITableView()</string>
+</string>
 				<key>trailing</key>
 				<string>	var favourites: [Follower]	= []
 	
@@ -95,6 +95,53 @@ class FavouritesListVC: UIViewController {
 			</dict>
 			<key>title</key>
 			<string>TableView</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>47</string>
+					<key>StartingColumnNumber</key>
+					<string>74</string>
+					<key>StartingLineNumber</key>
+					<string>46</string>
+					<key>Timestamp</key>
+					<string>732559861.2247159</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>GHFollowers/Screens/SearchVC.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>
+</string>
+				<key>leading</key>
+				<string>        show(followerListVC, sender: self)
+		
+//		UIView.animate(withDuration: 0.33, delay: 0, options: .curveEaseIn) { // study purpose only</string>
+				<key>trailing</key>
+				<string>//			view.layoutIfNeeded() // force update of any layout changes to be animated
+//		}
+    }
+</string>
+			</dict>
+			<key>title</key>
+			<string>Animation</string>
 			<key>type</key>
 			<string>bookmark</string>
 		</dict>
