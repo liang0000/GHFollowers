@@ -128,7 +128,7 @@ class FavouritesListVC: UIViewController {
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>		UIView.animate(withDuration: 33, delay: 0, options: .curveEaseIn) {
+				<string>		UIView.animate(withDuration: 0.33, delay: 0, options: .curveEaseIn) {
 </string>
 				<key>leading</key>
 				<string>		view.layoutIfNeeded()

@@ -78,7 +78,7 @@ class FollowerListVC: UIViewController {
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
     }
     
-    func configureSearchController() {
+	func configureSearchController() {
         let searchController 									= UISearchController()
         searchController.searchResultsUpdater 					= self // set the delegate
         searchController.searchBar.placeholder 					= "Search for a username"
@@ -175,7 +175,7 @@ extension FollowerListVC: UICollectionViewDelegate {
         guard let follower = dataSource.itemIdentifier(for: indexPath) else { return } // to get the data of selected item
         
         let destVC 			= UserInfoVC() // destination view controller
-        destVC.username 	= follower.login
+		destVC.username 	= follower.login
 		destVC.delegate		= self
         let navController 	= UINavigationController(rootViewController: destVC) // navigation on top
         present(navController, animated: true) // .sheet

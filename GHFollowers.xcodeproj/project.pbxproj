@@ -142,13 +142,13 @@
 			path = FollowerCell;
 			sourceTree = "<group>";
 		};
-		B61E59672BA010D700A8C02C /* Other Views */ = {
+		B61E59672BA010D700A8C02C /* Other Screens */ = {
 			isa = PBXGroup;
 			children = (
 				B61E59682BA010EA00A8C02C /* WarCardVC.swift */,
 				B61E596E2BA0253C00A8C02C /* SquidVC.swift */,
 			);
-			path = "Other Views";
+			path = "Other Screens";
 			sourceTree = "<group>";
 		};
 		B623E56E2B6BEBAC0061D4DE /* Extensions */ = {
@@ -299,7 +299,7 @@
 				B623E5712B6CA06F0061D4DE /* Models */,
 				B623E5792B6E289D0061D4DE /* Utilities */,
 				B623E56E2B6BEBAC0061D4DE /* Extensions */,
-				B61E59672BA010D700A8C02C /* Other Views */,
+				B61E59672BA010D700A8C02C /* Other Screens */,
 				B61E59722BA029D200A8C02C /* Main.storyboard */,
 				B6538E802B5FBAE400C42B2A /* LaunchScreen.storyboard */,
 				B6538E7E2B5FBAE400C42B2A /* Assets.xcassets */,
@@ -560,6 +560,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5PM8972HD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GHFollowers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -587,6 +588,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5PM8972HD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GHFollowers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
