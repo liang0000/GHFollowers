@@ -121,7 +121,7 @@ class FollowerListVC: UIViewController {
     
     func updateData(on followers: [Follower]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>() // snapshot for different data
-        snapshot.appendSections([.main]) // why?
+        snapshot.appendSections([.main]) // Section() {}
         snapshot.appendItems(followers) // to add data into snapshot
         DispatchQueue.main.async { self.dataSource.apply(snapshot, animatingDifferences: true) } // to add snapshots into datasource
     }
