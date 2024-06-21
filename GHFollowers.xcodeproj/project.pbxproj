@@ -107,7 +107,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B601250A2B63B9F600217CE6 /* Custom Views */ = {
+		B601250A2B63B9F600217CE6 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				B632FDB72B98667600EE2CA8 /* TabBarControllers */,
@@ -119,7 +119,7 @@
 				B6265FE72B8245BB003C2450 /* ViewControllers */,
 				B6265FE42B82459A003C2450 /* Views */,
 			);
-			path = "Custom Views";
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		B601250B2B63BA0D00217CE6 /* Screens */ = {
@@ -142,13 +142,13 @@
 			path = FollowerCell;
 			sourceTree = "<group>";
 		};
-		B61E59672BA010D700A8C02C /* Other Screens */ = {
+		B61E59672BA010D700A8C02C /* OtherScreens */ = {
 			isa = PBXGroup;
 			children = (
 				B61E59682BA010EA00A8C02C /* WarCardVC.swift */,
 				B61E596E2BA0253C00A8C02C /* SquidVC.swift */,
 			);
-			path = "Other Screens";
+			path = OtherScreens;
 			sourceTree = "<group>";
 		};
 		B623E56E2B6BEBAC0061D4DE /* Extensions */ = {
@@ -294,12 +294,12 @@
 				B6538E752B5FBAE100C42B2A /* AppDelegate.swift */,
 				B6538E772B5FBAE100C42B2A /* SceneDelegate.swift */,
 				B601250B2B63BA0D00217CE6 /* Screens */,
-				B601250A2B63B9F600217CE6 /* Custom Views */,
+				B601250A2B63B9F600217CE6 /* CustomViews */,
 				B623E5762B6D473E0061D4DE /* Managers */,
 				B623E5712B6CA06F0061D4DE /* Models */,
 				B623E5792B6E289D0061D4DE /* Utilities */,
 				B623E56E2B6BEBAC0061D4DE /* Extensions */,
-				B61E59672BA010D700A8C02C /* Other Screens */,
+				B61E59672BA010D700A8C02C /* OtherScreens */,
 				B61E59722BA029D200A8C02C /* Main.storyboard */,
 				B6538E802B5FBAE400C42B2A /* LaunchScreen.storyboard */,
 				B6538E7E2B5FBAE400C42B2A /* Assets.xcassets */,
