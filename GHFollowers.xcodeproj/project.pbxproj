@@ -113,7 +113,7 @@
 				B632FDB72B98667600EE2CA8 /* TabBarControllers */,
 				B6265FE52B8245AB003C2450 /* Buttons */,
 				B623E57C2B6F35840061D4DE /* Cells */,
-				B6265FE62B8245B2003C2450 /* Image */,
+				B6265FE62B8245B2003C2450 /* Images */,
 				B6265FE92B8245F3003C2450 /* Labels */,
 				B6265FE82B8245CE003C2450 /* TextFields */,
 				B6265FE72B8245BB003C2450 /* ViewControllers */,
@@ -218,12 +218,12 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
-		B6265FE62B8245B2003C2450 /* Image */ = {
+		B6265FE62B8245B2003C2450 /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				B623E57F2B6F365D0061D4DE /* GFAvatarImageView.swift */,
 			);
-			path = Image;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		B6265FE72B8245BB003C2450 /* ViewControllers */ = {
