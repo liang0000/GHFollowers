@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		599E0E5E2C26CE4C0043E464 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599E0E5D2C26CE4C0043E464 /* UIView+Ext.swift */; };
+		59E2BF702CD4A8D20021A11D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E2BF6F2CD4A8D20021A11D /* HomeVC.swift */; };
 		B60125052B6251A800217CE6 /* FavouritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60125042B6251A800217CE6 /* FavouritesListVC.swift */; };
 		B60125072B62647C00217CE6 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60125062B62647C00217CE6 /* GFButton.swift */; };
 		B60125092B627C8000217CE6 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60125082B627C8000217CE6 /* GFTextField.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		599E0E5D2C26CE4C0043E464 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		59E2BF6F2CD4A8D20021A11D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		B60125042B6251A800217CE6 /* FavouritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesListVC.swift; sourceTree = "<group>"; };
 		B60125062B62647C00217CE6 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		B60125082B627C8000217CE6 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				B61E59682BA010EA00A8C02C /* WarCardVC.swift */,
 				B61E596E2BA0253C00A8C02C /* SquidVC.swift */,
+				59E2BF6F2CD4A8D20021A11D /* HomeVC.swift */,
 			);
 			path = OtherScreens;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				B632FD672B93792300EE2CA8 /* PersistenceManager.swift in Sources */,
 				B623E5662B6B67220061D4DE /* GFTitleLabel.swift in Sources */,
 				B6538E762B5FBAE100C42B2A /* AppDelegate.swift in Sources */,
+				59E2BF702CD4A8D20021A11D /* HomeVC.swift in Sources */,
 				B632FD652B917F4500EE2CA8 /* Date+Ext.swift in Sources */,
 				B623E57B2B6E28C00061D4DE /* GFError.swift in Sources */,
 				B61E59242B9DF7AA00A8C02C /* FollowerView.swift in Sources */,

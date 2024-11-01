@@ -37,7 +37,7 @@ class WarCardVC: UIViewController {
 		
 		// MARK: Storyboard way
 		// click the VC in storyboard > Editor tab on top > Embed in > Navigation Controller
-		// assign class and Storyboard ID to SquidVC in storyboard inspector > tick Use Storyboard ID
+		// assign Class and Storyboard ID to SquidVC in Identity Inspector > tick Use Storyboard ID
 		let squidVC = storyboard?.instantiateViewController(withIdentifier: "SquidVC") as! SquidVC
 		show(squidVC, sender: self)
 		
